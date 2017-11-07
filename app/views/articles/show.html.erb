@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <article class="text-center">
+        <h2>
+          <%= @article.title %>
+        </h2>
+        <%= @article.content %>
+        <%= link_to "Edit", edit_article_path(@article) %>
+        <%= link_to "Delete", article_path(@article),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+      </article>
+    </div>
+  </div>
+</div>
